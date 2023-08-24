@@ -39,6 +39,8 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel1.setText("Tic-Tac-Toe ");
 
         Play.setBackground(new java.awt.Color(255, 255, 255));
+        Play.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Play.setForeground(new java.awt.Color(0, 0, 0));
         Play.setText("Play");
         Play.setBorder(null);
         Play.setBorderPainted(false);
@@ -67,8 +69,8 @@ public class WelcomePage extends javax.swing.JFrame {
                         .addGap(239, 239, 239)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(324, 324, 324)
-                        .addComponent(Play, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(311, 311, 311)
+                        .addComponent(Play, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(264, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -76,9 +78,9 @@ public class WelcomePage extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(133, 133, 133)
                 .addComponent(jLabel1)
-                .addGap(47, 47, 47)
+                .addGap(37, 37, 37)
                 .addComponent(Play, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
         );

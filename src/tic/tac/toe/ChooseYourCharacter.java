@@ -53,9 +53,9 @@ public class ChooseYourCharacter extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Choose");
 
-        playerO.setBackground(new java.awt.Color(153, 153, 153));
-        playerO.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        playerO.setForeground(new java.awt.Color(0, 0, 0));
+        playerO.setBackground(new java.awt.Color(255, 255, 255));
+        playerO.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        playerO.setForeground(new java.awt.Color(0, 0, 255));
         playerO.setText("O");
         playerO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,9 +63,9 @@ public class ChooseYourCharacter extends javax.swing.JFrame {
             }
         });
 
-        playerX.setBackground(new java.awt.Color(153, 153, 153));
-        playerX.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        playerX.setForeground(new java.awt.Color(0, 0, 0));
+        playerX.setBackground(new java.awt.Color(255, 255, 255));
+        playerX.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        playerX.setForeground(new java.awt.Color(255, 0, 0));
         playerX.setText("X");
         playerX.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +115,7 @@ public class ChooseYourCharacter extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

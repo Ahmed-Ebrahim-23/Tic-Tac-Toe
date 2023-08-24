@@ -1,6 +1,7 @@
 
 package tic.tac.toe;
 
+import java.awt.Color;
 import java.awt.Toolkit;
 
 public class MainBoard extends javax.swing.JFrame{
@@ -36,6 +37,7 @@ public class MainBoard extends javax.swing.JFrame{
          btn7.setEnabled(true);btn8.setEnabled(true);btn9.setEnabled(true);
          Full=0;
          Win = false;
+         PlayAgain.setVisible(false);
     }
     
     private void Fill(char x,int pos){
@@ -45,38 +47,47 @@ public class MainBoard extends javax.swing.JFrame{
         switch(pos){
             case 1:
                 btn1.setText(s);
+                btn1.setForeground((x=='X'?Color.red:Color.blue));
                 board[0][0]=x;
                 break;
             case 2:
                 btn2.setText(s);
+                btn2.setForeground((x=='X'?Color.red:Color.blue));
                 board[0][1]=x;
                 break;
             case 3:
                 btn3.setText(s);
+                btn3.setForeground((x=='X'?Color.red:Color.blue));
                 board[0][2]=x;
                 break;
             case 4:
                 btn4.setText(s);
+                btn4.setForeground((x=='X'?Color.red:Color.blue));
                 board[1][0]=x;
                 break;
             case 5:
                 btn5.setText(s);
+                btn5.setForeground((x=='X'?Color.red:Color.blue));
                 board[1][1]=x;
                 break;
             case 6:
                 btn6.setText(s);
+                btn6.setForeground((x=='X'?Color.red:Color.blue));
                 board[1][2]=x;
                 break;
             case 7:
                 btn7.setText(s);
+                btn7.setForeground((x=='X'?Color.red:Color.blue));
                 board[2][0]=x;
                 break;
             case 8:
                 btn8.setText(s);
+                btn8.setForeground((x=='X'?Color.red:Color.blue));
                 board[2][1]=x;
                 break;
             case 9:
                 btn9.setText(s);
+                btn9.setForeground((x=='X'?Color.red:Color.blue));
                 board[2][2]=x;
                 break;
         }
@@ -111,6 +122,7 @@ public class MainBoard extends javax.swing.JFrame{
         char s = 0;
         if(Full==5){
             WinLabel.setText("It's a Tie");
+            PlayAgain.setVisible(true);
         }
         
         // Scan the rows to check if the COM have a possible win
@@ -175,6 +187,7 @@ public class MainBoard extends javax.swing.JFrame{
                 com++;
                 ComScore.setText(com+"");
             }
+            PlayAgain.setVisible(true);
             return true;
         }
         return false;
@@ -218,11 +231,12 @@ public class MainBoard extends javax.swing.JFrame{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tic-Tac-Toe");
         setLocation(new java.awt.Point(350, 225));
+        setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
 
-        btn3.setBackground(new java.awt.Color(153, 153, 153));
-        btn3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn3.setBackground(new java.awt.Color(255, 255, 255));
+        btn3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn3.setForeground(new java.awt.Color(0, 0, 0));
         btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,8 +244,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn1.setBackground(new java.awt.Color(153, 153, 153));
-        btn1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn1.setBackground(new java.awt.Color(255, 255, 255));
+        btn1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn1.setForeground(new java.awt.Color(0, 0, 0));
         btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,8 +253,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn2.setBackground(new java.awt.Color(153, 153, 153));
-        btn2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn2.setBackground(new java.awt.Color(255, 255, 255));
+        btn2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn2.setForeground(new java.awt.Color(0, 0, 0));
         btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,8 +262,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn4.setBackground(new java.awt.Color(153, 153, 153));
-        btn4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn4.setBackground(new java.awt.Color(255, 255, 255));
+        btn4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn4.setForeground(new java.awt.Color(0, 0, 0));
         btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -257,8 +271,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn5.setBackground(new java.awt.Color(153, 153, 153));
-        btn5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn5.setBackground(new java.awt.Color(255, 255, 255));
+        btn5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn5.setForeground(new java.awt.Color(0, 0, 0));
         btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,8 +280,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn6.setBackground(new java.awt.Color(153, 153, 153));
-        btn6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn6.setBackground(new java.awt.Color(255, 255, 255));
+        btn6.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn6.setForeground(new java.awt.Color(0, 0, 0));
         btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,8 +289,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn7.setBackground(new java.awt.Color(153, 153, 153));
-        btn7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn7.setBackground(new java.awt.Color(255, 255, 255));
+        btn7.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn7.setForeground(new java.awt.Color(0, 0, 0));
         btn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,8 +298,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn8.setBackground(new java.awt.Color(153, 153, 153));
-        btn8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn8.setBackground(new java.awt.Color(255, 255, 255));
+        btn8.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn8.setForeground(new java.awt.Color(0, 0, 0));
         btn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,8 +307,8 @@ public class MainBoard extends javax.swing.JFrame{
             }
         });
 
-        btn9.setBackground(new java.awt.Color(153, 153, 153));
-        btn9.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btn9.setBackground(new java.awt.Color(255, 255, 255));
+        btn9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         btn9.setForeground(new java.awt.Color(0, 0, 0));
         btn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,6 +328,7 @@ public class MainBoard extends javax.swing.JFrame{
         ComScore.setForeground(new java.awt.Color(255, 255, 255));
         ComScore.setText("0");
 
+        ComLabel.setBackground(new java.awt.Color(255, 255, 255));
         ComLabel.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         ComLabel.setForeground(new java.awt.Color(255, 255, 255));
         ComLabel.setText("Com");
@@ -439,7 +454,7 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
        if(!Filled[9] && !Win){
             Fill(mainBoard.getPlayer(),9);
-             Full++;
+            Full++;
              Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
@@ -451,7 +466,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
        if(!Filled[8] && !Win){
             Fill(mainBoard.getPlayer(),8);
-             Full++;Win=WinScan();
+            Full++;
+            Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
@@ -462,7 +478,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
         if(!Filled[7] && !Win){
             Fill(mainBoard.getPlayer(),7);
-             Full++;Win=WinScan();
+            Full++;
+            Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
@@ -473,7 +490,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
         if(!Filled[6] && !Win){
             Fill(mainBoard.getPlayer(),6);
-             Full++;Win=WinScan();
+             Full++;
+             Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
@@ -484,7 +502,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         if(!Filled[5] && !Win){
             Fill(mainBoard.getPlayer(),5);
-             Full++;Win=WinScan();
+             Full++;
+             Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
@@ -495,7 +514,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         if(!Filled[4] && !Win){
             Fill(mainBoard.getPlayer(),4);
-             Full++;Win=WinScan();
+             Full++;
+             Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
@@ -506,7 +526,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         if(!Filled[2] && !Win){
             Fill(mainBoard.getPlayer(),2);
-             Full++;Win=WinScan();
+             Full++;
+             Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
@@ -517,7 +538,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         if(!Filled[1] && !Win){
             Fill(mainBoard.getPlayer(),1);
-             Full++;Win=WinScan();
+             Full++;
+             Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
@@ -528,7 +550,8 @@ public class MainBoard extends javax.swing.JFrame{
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         if(!Filled[3] && !Win){
             Fill(mainBoard.getPlayer(),3);
-             Full++;Win=WinScan();
+             Full++;
+             Win=WinScan();
             if(Full<=4 && !Win){
                 Fill(mainBoard.getCom(),mainBoard.ComPlay(board));
                 Win=WinScan();
